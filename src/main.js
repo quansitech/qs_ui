@@ -1,15 +1,12 @@
 import Vue from 'vue'
 import App from './App'
 import store from './store'
-// import './static/styles/var.less'
+import './static/styles/var.less'
 import base from './common/base'
 import api from './http/api'
 Vue.config.productionTip = false
-import saveImage from './components/save-image/save-image.vue'
-// Vue.component('painter',painter)
-Vue.component('saveImage',saveImage)
-// Vue.component('bottomTab',bottomTab)
-// Vue.component('modal',modal)
+import modal from './components/modal/modal.vue'
+Vue.component('modal',modal)
 Vue.prototype.base = base;
 Vue.prototype.api = api;
 App.mpType = 'app'

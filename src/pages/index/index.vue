@@ -10,6 +10,24 @@
 	  customClass="bgBlue"
     ></saveImage>
     <button @click="openSetting">打开设置</button>
+
+    <modal :showCloseBtn="true" customClass="my-modal" title="自定义标题的高度">
+      <template slot="showModal">
+        <button class="cu-btn bg-blue block">点我展开1号弹窗</button>
+      </template>
+      <template slot="content">
+        <view class="modal-box-1 padding-xl">我是1号弹窗</view>
+      </template>
+    </modal>
+
+    <modal :showCloseBtn="false" showModalName="modalTwo" customClass="red-color-title" title="我是2号标题" :afterHideModal="ByeModal">
+      <template slot="showModal">
+        <button class="cu-btn bg-blue block">点我展开2号弹窗</button>
+      </template>
+      <template slot="content">
+        <view class="modal-box-1 padding-xl">我是2号弹窗</view>
+      </template>
+    </modal>
   </view>
 </template>
 
@@ -35,8 +53,18 @@ export default {
           });
         }
       });
-	},
-	openSetting: function() {
+  },
+  hiModal() {
+    return new Promise(res => {
+      setTimeout(() => {
+        res('ASYNC hi modal')
+      }, 2000);
+    })
+  },
+  ByeModal() {
+    console.log('Bye Bye modal')
+  },
+	openSetting() {
       uni.openSetting({
         success: set => {
           console.log(set);
@@ -50,7 +78,7 @@ export default {
 };
 </script>
 
-<style>
+<style lang="less">
 .content {
   text-align: center;
   height: 400upx;
@@ -68,5 +96,17 @@ export default {
 }
 .bgBlue{
 	background-color: blue;
+}
+.my-modal{
+  .cu-bar{
+    min-height: 66rpx;
+  }
+}
+.red-color-title{
+  .cu-bar{
+    .content{
+      color: red;
+    }
+  }
 }
 </style>
