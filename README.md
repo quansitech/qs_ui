@@ -1,7 +1,7 @@
 # qs_weapp_template
 
-基于 uni-app 框架，集成常用组件，基础布局，动画。
-tips: **以下组件只兼容支付宝与微信小程序**
+基于 uni-app 框架，集成常用组件，基础布局，动画。  
+**tips: 以下组件只兼容支付宝与微信小程序**
 
 ## 代办组件
 
@@ -35,9 +35,9 @@ tips: **以下组件只兼容支付宝与微信小程序**
 
 ### 弹窗
 
-说明：**必须写入需要被点击的元素和要显示的 content**
-"被点击的元素" => **slot name="showModal"**
-"要显示的 content" => **slot name="content"**
+说明：**必须写入需要被点击的元素和要显示的 content**  
+"被点击的元素" => **slot name="showModal"**  
+"要显示的 content" => **slot name="content"**  
 可能上面解释得不明白，参照下代码：
 
 ```html
