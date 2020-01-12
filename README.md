@@ -35,10 +35,9 @@
 
 ### 弹窗
 
-说明：**必须写入需要被点击的元素和要显示的 content**  
-"被点击的元素" => **slot name="showModal"**  
-"要显示的 content" => **slot name="content"**  
-可能上面解释得不明白，参照下代码：
+说明：**必须写入需要被点击的元素和要显示的 content。如果在同个页面需要写多个弹窗，那么必须写入 showModalName。**  
+"被点击的元素" => **slot name="showModal"**,"要显示的 content" => **slot name="content"**  
+可能上面解释得不明白，参照以下代码：
 
 ```html
 <modal
@@ -60,7 +59,7 @@
 | 字段                 | 类型     | 必填 | 默认  | 描述                                                                                    |
 | -------------------- | -------- | ---- | ----- | --------------------------------------------------------------------------------------- |
 | title                | String   | 否   | 标题  | 弹窗头部的标题                                                                          |
-| showModalName        | String   | 否   | modal | 需要被显示的弹窗名称                                                                    |
+| showModalName        | String   | 否   | modal | 需要被显示的弹窗名称（如果有多个弹窗，必须写入这个属性）                                |
 | showCloseBtn         | Boolean  | 否   | true  | 是否显示关闭按钮（选择不显示的话，隐藏事件会被放在最外的图层）                          |
 | customClass          | String   | 否   | 无    | 自定义类名                                                                              |
 | asyncBeforeShowModal | Function | 否   | 无    | 显示弹窗前的异步钩子（异步事件必须使用 Promise,栗子：return new Promise(res => xxxxx)） |
