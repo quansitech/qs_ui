@@ -5,3 +5,4 @@ lib/
 temp/build_ext/
 .DS_Store
 dist/
+temp/
