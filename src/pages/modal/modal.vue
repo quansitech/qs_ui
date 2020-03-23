@@ -66,8 +66,9 @@
         </modal>
         <modal ref="modal9" showModalName="handleModal2" :manualAction="true" theme="default" @asyncBeforeHide="asyncBeforeHide('modal8')" @asyncBeforeShow="asyncBeforeShow('modal8')">
             <template v-slot:showModal>
-                <view v-if="!loading" class="cu-btn block bg-blue base-btn">异步事件弹窗</view>
-                <view v-else class="cu-btn block bg-blue base-btn"><text class="cuIcon-loading2 cuIconfont-spin"></text>异步事件弹窗</view>
+                <async-button ref="asyncButton1" customClass="bg-blue base-btn" beforeText="异步事件弹窗" afterText="获取数据中" ></async-button>
+                <!-- <view v-if="!loading" class="cu-btn block bg-blue base-btn">异步事件弹窗</view>
+                <view v-else class="cu-btn block bg-blue base-btn"><text class="cuIcon-loading2 cuIconfont-spin"></text>异步事件弹窗</view> -->
             </template>
             <template v-slot:content>
                 <view class="padding-xl">请查看console控制台</view>
@@ -89,9 +90,11 @@
 
 <script>
     import modal from '@/components/qs-modal/qs-modal.vue';
+    import asyncButton from '@/components/qs-async-button/qs-async-button.vue';
     export default {
         components: {
             modal,
+            asyncButton
         },
         data() {
             return {
@@ -121,7 +124,7 @@
                 setTimeout(() => {
                     this.$nextTick().then(res => {
                         console.log('获取请求数据完毕')
-                        this.loading = false;
+                        this.$refs.asyncButton1.loading = false;
                         this.$refs[refName].modalName = this.$refs[refName].showModalName;
                     })
                 }, 1300);

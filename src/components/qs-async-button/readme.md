@@ -25,6 +25,7 @@ export default {
 | ----------- | ------- | ---- | -------- | --------------------------------- |
 | afterText     | Array   | 是   | 无       | 请求前的按钮文本 |
 | beforeText   | Boolean | 是   | 无       | 请求后的按钮文本                      |
+| loading   | Boolean | 否   | false       | true为显示loading                      |
 | customClass | String  | 否   | 无       | 自定义类名                        |
 
 ### 事件说明
