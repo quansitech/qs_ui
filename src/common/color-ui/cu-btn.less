@@ -1,0 +1,124 @@
+/* ==================
+          按钮
+ ==================== */
+
+ .cu-btn {
+	position: relative;
+	border: 0upx;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	box-sizing: border-box;
+	padding: 0 30upx;
+	font-size: 28upx;
+	height: 64upx;
+	line-height: 1;
+	text-align: center;
+	text-decoration: none;
+	overflow: visible;
+	margin-left: initial;
+	transform: translate(0upx, 0upx);
+	margin-right: initial;
+}
+
+.cu-btn::after {
+	display: none;
+}
+
+.cu-btn:not([class*="bg-"]) {
+	background-color: #f0f0f0;
+}
+
+.cu-btn[class*="line"] {
+	background-color: transparent;
+}
+
+.cu-btn[class*="line"]::after {
+	content: " ";
+	display: block;
+	width: 200%;
+	height: 200%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	border: 1upx solid #e6e6e6;
+	transform: scale(0.5);
+	transform-origin: 0 0;
+	box-sizing: border-box;
+	border-radius: 12upx;
+	z-index: 1;
+	pointer-events: none;
+}
+
+.cu-btn.round[class*="line"]::after {
+	border-radius: 1000upx;
+}
+
+.cu-btn[class*="lines"]::after {
+	border: 6upx solid #e6e6e6;
+}
+
+.cu-btn[class*="bg-"]::after {
+	display: none;
+}
+
+.cu-btn.sm {
+	padding: 0 20upx;
+	font-size: 20upx;
+	height: 48upx;
+}
+
+.cu-btn.lg {
+	padding: 0 40upx;
+	font-size: 32upx;
+	height: 80upx;
+}
+.cu-btn.round{
+	border-radius: 44rpx;
+}
+.cu-btn.block{
+	width: 100%;
+	font-size: 32upx;
+	height: 88rpx;
+}
+
+.cu-btn.cuIcon.sm {
+	width: 48upx;
+	height: 48upx;
+}
+
+.cu-btn.cuIcon {
+	width: 64upx;
+	height: 64upx;
+	border-radius: 500upx;
+	padding: 0;
+}
+
+button.cuIcon.lg {
+	width: 80upx;
+	height: 80upx;
+}
+
+.cu-btn.shadow-blur::before {
+	top: 4upx;
+	left: 4upx;
+	filter: blur(6upx);
+	opacity: 0.6;
+}
+
+.cu-btn.button-hover {
+	transform: translate(1upx, 1upx);
+}
+
+.block {
+	display: block;
+}
+
+.cu-btn.block {
+	display: flex;
+}
+
+.cu-btn[disabled] {
+	opacity: 0.6;
+	color: #ffffff;
+}
