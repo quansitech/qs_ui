@@ -41,6 +41,12 @@
 			"style": {
 				"navigationBarTitleText": "弹框"
 			}
+		},
+		{
+			"path": "pages/isList/isList",
+			"style": {
+				"navigationBarTitleText": "请求数据列表"
+			}
 		}
     ],
 	"globalStyle": {

@@ -3,6 +3,7 @@
         <view class="cu-btn base-btn block" :style="{backgroundColor: randomColor()}" @tap="toLink('modal')">模态框</view>
         <view class="cu-btn base-btn block" :style="{backgroundColor: randomColor()}" @tap="toLink('saveImage')">保存图片</view>
         <view class="cu-btn base-btn block" :style="{backgroundColor: randomColor()}" @tap="toLink('asyncButton')">异步按钮</view>
+        <view class="cu-btn base-btn block" :style="{backgroundColor: randomColor()}" @tap="toLink('isList')">请求数据列表</view>
         <bottom-tab tabIndex="1"></bottom-tab>
     </view>
 </template>

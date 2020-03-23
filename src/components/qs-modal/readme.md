@@ -26,21 +26,20 @@ export default {
 </modal>
 ```
 
-### 属性说明
+### 属性
 
 | 字段           | 类型    | 必填 | 默认    | 描述                                                                 |
 | -------------- | ------- | ---- | ------- | -------------------------------------------------------------------- |
 | theme          | String  | 否   | default | 主题类型，具体有哪些主题可参考./src/pages/modal 文件                 |
 | title          | String  | 否   | 提示    | 对话框的标题提示。（如果有隐藏需求，请使用自定义类名）               |
 | showModalName  | String  | 否   | modal   | 对应要显示的模态框名称                                               |
-| customClass    | String  | 否   | 无      | 自定义类名                                                           |
 | userInfo       | Boolean | 否   | false   | 请求用户授权用户信息，当前属性只有在主题为"dialog"的情况才会起作用。 |
 | maskHideSwidth | Boolean | 否   | true    | 是否允许外层蒙版点击隐藏                                             |
 | manualAction   | Boolean | 否   | false   | 手动触发（show,hide）模态框，一般配合异步事件使用                    |
 | confirmText    | String  | 否   | 确认    | 主题为"dialog"时的确认按钮文本                                       |
 | cancelText     | String  | 否   | 取消    | 主题为"dialog"时的取消按钮文本                                       |
 
-### 事件说明
+### 自定义事件
 
 | 钩子名称        | 描述                                                             |
 | --------------- | ---------------------------------------------------------------- |

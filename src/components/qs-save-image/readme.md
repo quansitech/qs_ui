@@ -22,7 +22,7 @@ export default {
 ></save-image>
 ```
 
-### 属性说明
+### 属性
 
 
 | 字段        | 类型    | 必填 | 默认     | 描述                              |
@@ -30,4 +30,3 @@ export default {
 | btnText     | String  | 否   | 保存图片 | 按钮文本                          |
 | fileUrl     | Array   | 是   | 无       | 需要保存的图片路径,可放入多张图片 |
 | isTempDir   | Boolean | 是   | 无       | 是否本地路径                      |
-| customClass | String  | 否   | 无       | 自定义类名                        |

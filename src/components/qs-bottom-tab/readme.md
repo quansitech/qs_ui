@@ -31,7 +31,7 @@ export default {
 <bottom-tab tabIndex="1"></bottom-tab>
 ```
 
-### 属性说明
+### 属性
 
 
 | 字段        | 类型    | 必填 | 默认     | 描述                              |
