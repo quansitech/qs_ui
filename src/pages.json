@@ -47,6 +47,18 @@
 			"style": {
 				"navigationBarTitleText": "请求数据列表"
 			}
+		},
+		{
+			"path": "pages/authAddress/authAddress",
+			"style": {
+				"navigationBarTitleText": "获取用户地址"
+			}
+		},
+		{
+			"path": "pages/checkLogin/checkLogin",
+			"style": {
+				"navigationBarTitleText": "检查用户是否已登录"
+			}
 		}
     ],
 	"globalStyle": {

@@ -189,6 +189,7 @@ export default {
       this.$emit("confirm");
     },
     mpGetUserInfo(e) {
+      this.modalName = null;
       this.$emit("getUserInfo", e);
     }
   }

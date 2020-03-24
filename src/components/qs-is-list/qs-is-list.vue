@@ -9,6 +9,7 @@
 
 <script>
 export default {
+  name: "QsIsList",
   data() {
     return {
       loading: true,
