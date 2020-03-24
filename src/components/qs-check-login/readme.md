@@ -7,7 +7,7 @@
 **如果你只是想单纯检查该用户是否登录，建议让后端写个可以检查登录的接口。**<br>
 
 (+\_+)?第一次写流程图，勉强看下，如果实在看不明白，请查看源码。
-![checkLogin流程图](<https://github.com/quansitech/qs_ui/blob/master/src/static/img/1585045563(1).jpg>)
+![checkLogin流程图](<https://github.com/quansitech/qs_ui/blob/master/src/static/img/1585046903(1).jpg>)
 
 这个组件需要配合./src/common/login.js 来使用，该 js 封装了用户注册，登录，登录成功后返回用户信息，不成功的话，继续静默登录的逻辑。（具体还需要看代码配合后端接口进行修改）<br>
 还需要配合[modal 组件](https://github.com/quansitech/qs_ui/blob/master/src/components/qs-modal/readme.md)的用户授权窗口使用。
