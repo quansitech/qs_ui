@@ -12,6 +12,7 @@
 * 请求数据列表      [isList.md](https://github.com/quansitech/qs_ui/blob/master/src/components/qs-is-list/readme.md)
 * 授权地址          [authAddress.md](https://github.com/quansitech/qs_ui/blob/master/src/components/qs-auth-address/readme.md)
 * 检查是否已授权登录 [checkLogin.md](https://github.com/quansitech/qs_ui/blob/master/src/components/qs-check-login/readme.md)
+* 选项卡 [tabs.md](https://github.com/quansitech/qs_ui/blob/master/src/components/qs-tabs/readme.md)
 
 **tips**
 1. 详细用法,例子。请参考./src/pages文件夹中的例子。

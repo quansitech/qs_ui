@@ -6,6 +6,7 @@
         <view class="cu-btn base-btn block" :style="{backgroundColor: randomColor()}" @tap="toLink('isList')">请求数据列表</view>
         <view class="cu-btn base-btn block" :style="{backgroundColor: randomColor()}" @tap="toLink('authAddress')">获取用户地址</view>
         <view class="cu-btn base-btn block" :style="{backgroundColor: randomColor()}" @tap="toLink('checkLogin')">检查用户是否已登录</view>
+        <view class="cu-btn base-btn block" :style="{backgroundColor: randomColor()}" @tap="toLink('tabs')">导航菜单</view>
         <bottom-tab tabIndex="1"></bottom-tab>
     </view>
 </template>
