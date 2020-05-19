@@ -1,27 +1,27 @@
 <template>
   <view :class="['group-modal',customClass]">
-    <view @tap="showModal(showModalName)">
+    <view @tap.stop="showModal(showModalName)">
       <slot name="showModal"></slot>
     </view>
     <block v-if="theme === 'dialog'">
       <view class="cu-modal"
             :class="modalName==showModalName?'show':''"
-            @tap="hideModal(maskHideSwidth)">
+            @tap.stop="hideModal(maskHideSwidth)">
         <view class="cu-dialog">
           <view class="cu-bar cu-radius bg-white justify-end ">
             <view class="content">{{title}}</view>
             <text class="cuIcon-roundclose cu-modal-close"
-                  @tap="hideModal(true)"></text>
+                  @tap.stop="hideModal(true)"></text>
           </view>
           <slot name="content"></slot>
           <view class="bottom-operation-view">
             <view class="cu-btn base-style"
-                  @tap="hideModal(true)">
+                  @tap.stop="hideModal(true)">
               <button class="cu-btn block base-button cancel radius"
                       @tap="cancel">{{cancelText}}</button>
             </view>
             <view class="cu-btn base-style"
-                  @tap="hideModal(true)">
+                  @tap.stop="hideModal(true)">
               <button v-if="userInfo"
                       class="cu-btn block base-button confirm radius"
                       open-type="getUserInfo"
@@ -37,7 +37,7 @@
     <block v-else-if="theme === 'default'">
       <view class="cu-modal"
             :class="modalName==showModalName?'show':''"
-            @tap="hideModal(maskHideSwidth)">
+            @tap.stop="hideModal(maskHideSwidth)">
         <view class="cu-dialog"
               @tap.stop="stopHandle">
           <slot name="content"></slot>
@@ -50,14 +50,14 @@
         <view class="cu-dialog confirm-dialog">
           <slot name="content"></slot>
           <view class="cu-btn block radius bg-white confirm"
-                @tap="confirm">{{confirmText}}</view>
+                @tap.stop="confirm">{{confirmText}}</view>
         </view>
       </view>
     </block>
     <block v-else-if="theme === 'left'">
       <view class="cu-modal drawer-modal justify-start "
             :class="modalName==showModalName?'show':''"
-            @tap="hideModal(maskHideSwidth)">
+            @tap.stop="hideModal(maskHideSwidth)">
         <view class="cu-dialog basis-lg"
               @tap.stop="stopHandle">
           <slot name="content"></slot>
@@ -67,7 +67,7 @@
     <block v-else-if="theme === 'right'">
       <view class="cu-modal drawer-modal justify-end "
             :class="modalName==showModalName?'show':''"
-            @tap="hideModal(maskHideSwidth)">
+            @tap.stop="hideModal(maskHideSwidth)">
         <view class="cu-dialog basis-lg"
               @tap.stop="stopHandle">
           <slot name="content"></slot>
@@ -77,7 +77,7 @@
     <block v-else-if="theme === 'bottom'">
       <view class="cu-modal bottom-modal "
             :class="modalName==showModalName?'show':''"
-            @tap="hideModal(maskHideSwidth)">
+            @tap.stop="hideModal(maskHideSwidth)">
         <view class="cu-dialog"
               @tap.stop="stopHandle">
           <slot name="content"></slot>
@@ -145,13 +145,13 @@ export default {
       if (options.e) {
         name = options.e;
       }
-      //使用异步的话，需要配置manualAction
+      //使用异步的话，需要配置manualAction，例如：生成数据完毕后再弹窗
       if (options.asyncBeforeEvent) {
         this.$emit(options.asyncBeforeEvent);
       }
       if (options.beforeEvent) {
         this.$emit(options.beforeEvent);
-        if (!this.manualAction) {
+        if (!this.manualAction) { 
           this.modalName = name;
         }
         if (options.afterEvent) {
