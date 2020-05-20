@@ -65,6 +65,30 @@
 			"style": {
 				"navigationBarTitleText": "选项卡"
 			}
+		},
+		{
+			"path": "pages/countTo/countTo",
+			"style": {
+				"navigationBarTitleText": "数字滚动"
+			}
+		},
+		{
+			"path": "pages/countDown/countDown",
+			"style": {
+				"navigationBarTitleText": "数字倒计时"
+			}
+		},
+		{
+			"path": "pages/rate/rate",
+			"style": {
+				"navigationBarTitleText": "评分"
+			}
+		},
+		{
+			"path": "pages/skeleton/skeleton",
+			"style": {
+				"navigationBarTitleText": "骨架屏"
+			}
 		}
     ],
 	"globalStyle": {
