@@ -19,7 +19,7 @@
         },
         methods: {
             toLink(url) {
-                this.base._navigateTo({url: `/pages/${url}/${url}`})
+                this.$qs.base._navigateTo({url: `/pages/${url}/${url}`})
             },
             randomColor(){
                 let r = Math.floor(Math.random()*255);

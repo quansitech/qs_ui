@@ -35,7 +35,6 @@ export default {
 | showModalName  | String  | 否   | modal   | 对应要显示的模态框名称                                               |
 | userInfo       | Boolean | 否   | false   | 请求用户授权用户信息，当前属性只有在主题为"dialog"的情况才会起作用。 |
 | maskHideSwidth | Boolean | 否   | true    | 是否允许外层蒙版点击隐藏                                             |
-| manualAction   | Boolean | 否   | false   | 手动触发（show,hide）模态框，一般配合异步事件使用                    |
 | confirmText    | String  | 否   | 确认    | 主题为"dialog"时的确认按钮文本                                       |
 | cancelText     | String  | 否   | 取消    | 主题为"dialog"时的取消按钮文本                                       |
 

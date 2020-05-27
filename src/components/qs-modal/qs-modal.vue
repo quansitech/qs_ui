@@ -116,11 +116,6 @@ export default {
       type: Boolean,
       default: true
     },
-    //手动处理（show,hide）弹窗，可配合异步使用
-    manualAction: {
-      type: Boolean,
-      default: false
-    },
     confirmText: {
       type: String,
       default: "确认"
@@ -145,15 +140,12 @@ export default {
       if (options.e) {
         name = options.e;
       }
-      //使用异步的话，需要配置manualAction，例如：生成数据完毕后再弹窗
       if (options.asyncBeforeEvent) {
         this.$emit(options.asyncBeforeEvent);
       }
       if (options.beforeEvent) {
         this.$emit(options.beforeEvent);
-        if (!this.manualAction) { 
-          this.modalName = name;
-        }
+        this.modalName = name;
         if (options.afterEvent) {
           this.$emit(options.afterEvent);
         }

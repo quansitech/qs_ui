@@ -26,7 +26,7 @@ export default {
   methods: {
     getList(list) {
       if (list.length) {
-        this.listArr = this.base.jsonClone(list);
+        this.listArr = this.$qs.base.jsonClone(list);
       }
     }
   },
